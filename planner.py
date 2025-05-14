@@ -14,6 +14,12 @@ def workout_and_diet_suggestion(bmi):
     else:
         return "Obese", "Workout: 60 mins daily, focus on cardio\nDiet: Consult a dietitian, reduce sugar and fat"
 
+def gym_or_home_recommendation(bmi):
+    if bmi < 25:
+        return "Recommendation: Home workout is sufficient."
+    else:
+        return "Recommendation: Consider going to the gym for better results."
+
 def workout_planner():
     try:
         weight_input = input("Enter your weight in kg: ").strip()
@@ -34,15 +40,17 @@ def workout_planner():
         # Calculate BMI
         bmi = calculate_bmi(weight, height)
         category, suggestion = workout_and_diet_suggestion(bmi)
+        gym_home = gym_or_home_recommendation(bmi)
 
         print(f"\nYour BMI is: {bmi:.2f} ({category})")
         print("Suggestions:")
         print(suggestion)
+        print(gym_home)
 
     except ValueError as ve:
         print("Input Error:", ve)
     except Exception as e:
         print("An unexpected error occurred:", e)
 
-
+# Run the planner
 workout_planner()
