@@ -20,7 +20,9 @@ This app calculates your BMI using your weight and height, then recommends:
 | 25 - 29.9       | Overweight     |
 | 30 and above    | Obese          |
 
-## 🚀 Usage Instructions
+"v2.0: Added gym/home workout recommendation based on BMI
+
+## Usage Instructions
 1. Run `workout_planner.py`
 2. Enter your weight (kg) and height (cm)
 3. Click "Calculate"
